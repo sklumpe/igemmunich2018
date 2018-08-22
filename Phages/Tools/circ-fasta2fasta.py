@@ -21,7 +21,7 @@ with open(args.o[0], 'w') as fasta_outfile:
 
     for record in SeqIO.parse(fasta_infile[0], "fasta"):
 
-        # for each entry in input fasta file check if ID is meant to manipulated
+        # for each entry in input fasta file check if ID is meant to be manipulated
         if record.id in args.ids:
             length = len(record.seq)
             n = args.n[0]
