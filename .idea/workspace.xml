@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33252ae3-62f5-40e1-9b7b-c1a24dc26f0a" name="Default Changelist" comment="" />
+    <list default="true" id="33252ae3-62f5-40e1-9b7b-c1a24dc26f0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Phages/Tools/resolve-repeats.py" beforeDir="false" afterPath="$PROJECT_DIR$/Phages/Tools/resolve-repeats.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,25 +14,25 @@
     <session id="1193279836">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="2" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -51,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phages/Tools/circ-fasta2fasta.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="532">
+              <caret line="38" lean-forward="true" selection-end-line="38" />
               <folding>
                 <element signature="e#19#34#0" expanded="true" />
               </folding>
@@ -61,10 +63,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Phages/Tools/rearrange-fasta2fasta.py">
+        <entry file="file://$PROJECT_DIR$/Phages/Tools/resolve-repeats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+            <state relative-caret-position="599">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#19#34#0" expanded="true" />
               </folding>
@@ -89,6 +91,7 @@
       <list>
         <option value="$PROJECT_DIR$/Phages/Tools/circ-fasta2fasta.py" />
         <option value="$PROJECT_DIR$/Phages/Tools/rearrange-fasta2fasta.py" />
+        <option value="$PROJECT_DIR$/Phages/Tools/resolve-repeats.py" />
       </list>
     </option>
   </component>
@@ -98,7 +101,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="642" />
     <option name="width" value="638" />
     <option name="height" value="800" />
@@ -169,10 +172,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="642" y="0" width="638" height="800" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5687919" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21567044" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -204,20 +206,21 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Phages/Tools/rearrange-fasta2fasta.py" />
     <entry file="file://$PROJECT_DIR$/Phages/Tools/circ-fasta2fasta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="532">
+          <caret line="38" lean-forward="true" selection-end-line="38" />
           <folding>
             <element signature="e#19#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Phages/Tools/rearrange-fasta2fasta.py">
+    <entry file="file://$PROJECT_DIR$/Phages/Tools/resolve-repeats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+        <state relative-caret-position="599">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#19#34#0" expanded="true" />
           </folding>
