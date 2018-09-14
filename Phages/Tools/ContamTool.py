@@ -1,5 +1,8 @@
 import argparse
 from pathlib import Path
+import json
+
+
 ap = argparse.ArgumentParser(description='--reads file1.fastq --cont file2.fasta file3.fasta')
 ap.add_argument("--reads", required=True, help="path to the read file")
 ap.add_argument('--cont', nargs='+', help="path to the fasta file(s)", required=True)
@@ -34,6 +37,7 @@ for file in cont_file:
     os.system("graphmap align -r "+file+" -d "+read_file+" -o "+os.path.join(output_dir,sam_file_name))
 import pysam
 sam_file_to_dict = dict()
+fasta_file_to_dict = dict()
 for file in os.listdir(output_dir):
 
     alignedLength = 0
@@ -45,6 +49,7 @@ for file in os.listdir(output_dir):
     idNotAlignedReads = []
 
     if file.endswith(".sam"):
+        fasta_file_name = os.path.split(file)[1][:-4]+".fasta"
         samFile = pysam.AlignmentFile(output_dir+"/"+file, "r")
 
         for aln in samFile:
@@ -58,20 +63,23 @@ for file in os.listdir(output_dir):
             else:
                 idNotAlignedReads.append(aln.query_name)
         sep = "\t"
-        print(file)
-        print("DESCR", "ABS", "REL", sep=sep)
-        print("reads", totalReads, "{:.5}".format(1.0), sep=sep)
-        print("aligned reads", alignedReads, "{:.5}".format(alignedReads / totalReads), sep=sep)
-        print("unaligned reads", totalReads - alignedReads, "{:.5}".format((totalReads - alignedReads) / totalReads),
-              sep=sep)
-        print("bases", totalBases, "{:.5}".format(1.0), sep=sep)
-        print("alignment bases", alignmentBases, "{:.5}".format(alignmentBases / totalBases), sep=sep)
-        print("aligned bases", alignedLength, "{:.5}".format(alignedLength / totalBases), sep=sep)
-        print("unaligned bases", totalBases - alignedLength, "{:.5}".format((totalBases - alignedLength) / totalBases),
-              sep=sep)
+
+        #print(file)
+        #print("DESCR", "ABS", "REL", sep=sep)
+        #print("reads", totalReads, "{:.5}".format(1.0), sep=sep)
+        #print("aligned reads", alignedReads, "{:.5}".format(alignedReads / totalReads), sep=sep)
+        #print("unaligned reads", totalReads - alignedReads, "{:.5}".format((totalReads - alignedReads) / totalReads),
+        #      sep=sep)
+        #print("bases", totalBases, "{:.5}".format(1.0), sep=sep)
+        #print("alignment bases", alignmentBases, "{:.5}".format(alignmentBases / totalBases), sep=sep)
+        #print("aligned bases", alignedLength, "{:.5}".format(alignedLength / totalBases), sep=sep)
+        #print("unaligned bases", totalBases - alignedLength, "{:.5}".format((totalBases - alignedLength) / totalBases),
+        #      sep=sep)
         tmp_dict = dict(totalReads=totalReads, alignedReads=alignedReads, totalBases=totalBases, alignmentBases=alignmentBases,
                         alignedLength=alignedLength, idAlignedReads=idAlignedReads, idNotAlignedReads=idNotAlignedReads)
         sam_file_to_dict[os.path.join(output_dir,file)] = tmp_dict
+        fasta_file_to_dict[os.path.join(output_dir, fasta_file_name)]=tmp_dict
+print(json.dumps(fasta_file_to_dict))
 
 if extracted_not_aligned:
     intersected_reads = []
